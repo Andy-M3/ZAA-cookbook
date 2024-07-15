@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: CookBook API
+  version: 1.0.0
+paths:
+  /categories/:
+    get:
+      summary: Get a list of categories
+      responses:
+        '200':
+          description: Successful response
+  /categories/{id}/:
+    get:
+      summary: Get a category by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+  /recipes/:
+    get:
+      summary: Get a list of recipes
+      responses:
+        '200':
+          description: Successful response
+  /recipes/{id}/:
+    get:
+      summary: Get a recipe by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
